@@ -1,4 +1,4 @@
-# jobbr-execution-inmemory [![Build status](https://ci.appveyor.com/api/projects/status/akvsehv0wvwbo08a?svg=true)](https://ci.appveyor.com/project/Jobbr/jobbr-execution-inmemory)
+# jobbr-execution-inprocess [![Build status](https://ci.appveyor.com/api/projects/status/akvsehv0wvwbo08a?svg=true)](https://ci.appveyor.com/project/Jobbr/jobbr-execution-inproccess)
 Components to execute Jobs within same process
 
 ## Idea
@@ -14,4 +14,3 @@ Let Jobs run withing the current process where also the JobbrServer runs, so tha
 * Static Instances are per AppDomain only
 * Threads can be named
 * ThreadLocal could also help?
-
