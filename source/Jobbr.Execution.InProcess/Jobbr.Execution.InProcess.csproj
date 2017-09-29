@@ -7,8 +7,8 @@
     <ProjectGuid>{25384113-CD8A-4040-B079-74FFB33864BC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jobbr.Execution.InMemory</RootNamespace>
-    <AssemblyName>Jobbr.Execution.InMemory</AssemblyName>
+    <RootNamespace>Jobbr.Execution.InProcess</RootNamespace>
+    <AssemblyName>Jobbr.Execution.InProcess</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -31,9 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Jobbr.Server, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Jobbr.Server.1.0.0-unstable440\lib\net45\Jobbr.Server.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Jobbr.ComponentModel.Registration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jobbr.ComponentModel.Registration.1.0.0\lib\net45\Jobbr.ComponentModel.Registration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobbrBuilderExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

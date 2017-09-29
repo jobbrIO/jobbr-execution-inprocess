@@ -13,7 +13,7 @@ assembly_info:
   patch: false
 
 before_build:
-  - nuget restore source/Jobbr.Execution.InMemory.sln
+  - nuget restore source/Jobbr.Execution.InProcess.sln
   - ps: C:\ProgramData\chocolatey\lib\GitVersion.Portable\tools\GitVersion.exe /l console /output buildserver /updateAssemblyInfo
 
 platform: Any CPU
@@ -21,14 +21,11 @@ configuration: Release
 
 build:
   parallel: true 
-  project: source/Jobbr.Execution.InMemory.sln
+  project: source/Jobbr.Execution.InProcess.sln
 
 after_build:
-  - cmd: nuget install ILMerge -ExcludeVersion
-  - cmd: mkdir ilmerged
-  - cmd: ILMerge\tools\ILMerge.exe /out:ilmerged/Jobbr.Execution.InMemory.dll source/Jobbr.Execution.InMemory/bin/Release/*.dll /target:library /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319 /wildcards /internalize:internalize_exclude.txt 
-  - cmd: nuget pack source\Jobbr.Execution.InMemory.nuspec -version "%GitVersion_SemVer%" -prop "target=%CONFIGURATION%"
-  - cmd: appveyor PushArtifact "Jobbr.Execution.InMemory.%GitVersion_SemVer%.nupkg"
+  - cmd: nuget pack source\Jobbr.Execution.InProcess.nuspec -version "%GitVersion_NuGetVersion%" -prop "target=%CONFIGURATION%"
+  - cmd: appveyor PushArtifact "Jobbr.Execution.InProcess.%GitVersion_NuGetVersion%.nupkg"
 
 deploy:
 - provider: NuGet
