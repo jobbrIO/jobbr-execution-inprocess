@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Jobbr.Execution.InProcess</id>
     <version>$version$</version>
     <authors>Jobbr</authors>
     <owners>Jobbr</owners>
     <projectUrl>http://github.com/jobbrIO/jobbr-execution-inprocess</projectUrl>
-    <licenseUrl>https://raw.githubusercontent.com/jobbrIO/jobbr-execution-inprocess/develop/LICENSE</licenseUrl>
+    <license type="expression">GPL-3.0-only</license>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Jobbr is a .NET JobServer</description>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2022</copyright>
+    <icon>images\icon.png</icon>
     <dependencies>
       <dependency id="Jobbr.ComponentModel.Registration" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="Jobbr.Execution.InProcess/bin/Release/Jobbr.Execution.InProcess.dll" target="lib\net45"/>
-    <file src="Jobbr.Execution.InProcess/bin/Release/Jobbr.Execution.InProcess.pdb" target="lib\net45"/>
+    <file src="Jobbr.Execution.InProcess/bin/Release/net462/Jobbr.Execution.InProcess.dll" target="lib\net45"/>
+    <file src="Jobbr.Execution.InProcess/bin/Release/net462/Jobbr.Execution.InProcess.pdb" target="lib\net45"/>
+    <file src="icon.png" target="images/"/>
   </files>
 </package>
