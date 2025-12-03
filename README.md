@@ -1,3 +1,7 @@
+> [!IMPORTANT]  
+> This repository is obsolete.  
+> Development of Jobbr has been moved to the [jobbr mono-repo](https://github.com/jobbrIO/jobbr).
+
 # Jobbr Execution InProcess [![Build status](https://img.shields.io/appveyor/build/Jobbr/jobbr-execution-inprocess/develop.svg?label=develop)](https://ci.appveyor.com/project/Jobbr/jobbr-execution-inproccess)
 
 Components to execute Jobs within same process
